@@ -72,35 +72,4 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
-
-    /**
-     * Get Kabupaten/Kota data based on the selected province.
-     */
-    public function getKab(Request $request)
-    {
-        $id_provinsi = $request->id_provinsi;
-        $kabupatens = District::where('province_id', $id_provinsi)->get();
-
-        $options = "<option value=''>Pilih Kabupaten</option>";
-
-        foreach ($kabupatens as $kabupaten) {
-            $options .= "<option value='$kabupaten->id'>$kabupaten->name</option>";
-        }
-
-        echo $options;
-    }
-
-    public function getKec(Request $request)
-    {
-        $id_kabupaten = $request->id_kabupaten;
-        $kecamatans = Subdistrict::where('district_id', $id_kabupaten)->get();
-
-        $options = "<option value=''>Pilih Kecamatan</option>";
-
-        foreach ($kecamatans as $kecamatan) {
-            $options .= "<option value='$kecamatan->id'>$kecamatan->name</option>";
-        }
-
-        echo $options;
-    }
 }

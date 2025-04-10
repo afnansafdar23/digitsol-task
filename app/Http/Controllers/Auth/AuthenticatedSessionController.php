@@ -43,6 +43,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('login')->withToastSuccess('Sesi Anda telah berakhir, silakan masuk kembali.');
+        return redirect()->route('login')->withToastSuccess('Logged out Successfully!');
     }
 }
