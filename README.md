@@ -1,41 +1,51 @@
 # Document Management System
 
-A Laravel-based document management system that allows users to create, edit, publish, and manage documents.
+A robust Laravel-based document management solution designed for efficient document handling and workflow management.
 
-## Features
+## Overview
 
-- User Authentication
-- Document Management
-  - Create new documents
-  - Edit draft documents
-  - Publish documents
-  - View document details
-  - Delete documents
-- Status Management
-  - Draft status for editable documents
-  - Published status for finalized documents
-- Theme Customization
-  - Light mode
-  - Dark mode
-  - System preference mode
-- Responsive Design
-  - Desktop and mobile-friendly interface
-  - Mobile navigation support
+This system provides a comprehensive platform for managing documents with features like version control, status management, and secure user authentication. Built with Laravel 9.x, it offers a modern and responsive interface for both desktop and mobile users.
 
-## Requirements
+## Key Features
+
+- **Advanced Document Management**
+  - Document creation and versioning
+  - Draft and publication workflow
+  - Real-time status tracking
+  - Secure document deletion
+  - Detailed document viewing
+
+- **User Authentication & Security**
+  - Role-based access control
+  - Secure login system
+  - Session management
+  - Password protection
+
+- **Interface & Design**
+  - Responsive layout
+  - Dark/Light theme toggle
+  - System theme integration
+  - Mobile-first approach
+  - Intuitive navigation
+
+## Technical Requirements
 
 - PHP >= 8.0
 - Laravel 9.x
-- MySQL/MariaDB
-- Composer
-- Node.js & NPM
+- MySQL 5.7+ or MariaDB 10.3+
+- Composer 2.x
+- Node.js 14+ & NPM 6+
 
-## Installation
+## Quick Start Guide
 
-1. Clone the repository:
+### 1. System Setup
+
 ```bash
-git clone <https://github.com/afnansafdar23/digitsol-task.git>
+# Clone Repository
+git clone https://github.com/afnansafdar23/digitsol-task.git
 cd digitsol-task
+
+# Install Dependencies
 composer install
 
 ## Database Configuration
@@ -54,3 +64,14 @@ php artisan migrate --seed
 ##  Start the development server
 
 php artisan serve
+
+## Default Admin Credentials
+Email: admin@gmail.com
+Password: admin
+
+
+## Security Measures
+- CSRF protection enabled
+- Secure session handling
+- Authentication required for all operations
+- Protected routes and middleware implementation
