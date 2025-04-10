@@ -4,7 +4,7 @@ A robust Laravel-based document management solution designed for efficient docum
 
 ## Overview
 
-This system provides a comprehensive platform for managing documents with features like version control, status management, and secure user authentication. Built with Laravel 9.x, it offers a modern and responsive interface for both desktop and mobile users.
+This system provides a comprehensive platform for managing documents with features like version control, status management, and secure user authentication. Built with Laravel 10.x, it offers a modern and responsive interface for both desktop and mobile users.
 
 ## Key Features
 
@@ -31,7 +31,7 @@ This system provides a comprehensive platform for managing documents with featur
 ## Technical Requirements
 
 - PHP >= 8.0
-- Laravel 9.x
+- Laravel 10.x
 - MySQL 5.7+ or MariaDB 10.3+
 - Composer 2.x
 - Node.js 14+ & NPM 6+
