@@ -70,19 +70,4 @@ class User extends Authenticatable implements MustVerifyEmail
 
         return $username;
     }
-
-    public function province()
-    {
-        return $this->belongsTo(Province::class);
-    }
-
-    public function district()
-    {
-        return $this->belongsTo(District::class);
-    }
-
-    public function subdistrict()
-    {
-        return $this->belongsTo(Subdistrict::class);
-    }
 }

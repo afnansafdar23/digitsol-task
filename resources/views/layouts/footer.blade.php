@@ -5,8 +5,7 @@
         <div class="text-gray-900 order-2 order-md-1">
             <span class="text-muted fw-semibold me-1">Copyright &copy; {{ date('Y') }}. Built with <i
                     class="fas fa-heart text-danger"></i> by</span>
-            <a href="https://muhamdaily.com" target="_blank" class="text-gray-800 text-hover-primary">Muhammad
-                Mauribi</a>. <span class="text-muted fw-semibold me-1">All right reserved.</span>
+            <a href="#" target="_blank" class="text-gray-800 text-hover-primary">Afnan Safdar</a>. <span class="text-muted fw-semibold me-1">All right reserved.</span>
         </div>
         <!--end::Copyright-->
     </div>

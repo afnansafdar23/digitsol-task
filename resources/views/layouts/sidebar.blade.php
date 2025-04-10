@@ -4,8 +4,8 @@
     <!--begin::Logo-->
     <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
         <!--begin::Logo image-->
-        <a href="{{ route('home') }}">
-            <img alt="Logo" src="assets/media/logos/default-dark.svg" class="h-50px app-sidebar-logo-default" />
+        <a href="{{ route('home') }}" class="gap-4">
+            <x-application-logo class="block h-6 w-auto fill-current text-gray-800" /><span class=" text-white">DigitSol Laravel</span>
         </a>
         <!--end::Logo image-->
         <!--begin::Sidebar toggle-->
@@ -31,14 +31,13 @@
                 data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px"
                 data-kt-scroll-save-state="true">
                 <!--begin::Menu-->
-                <div class="menu menu-column menu-rounded menu-sub-indention fw-semibold" id="#kt_app_sidebar_menu"
-                    data-kt-menu="true" data-kt-menu-expand="false">
-                    <!--begin:Menu item-->
+                <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true"
+                    data-kt-menu-expand="false">
+                    <!--begin::Menu item-->
                     <div class="menu-item">
-                        <!--begin:Menu link-->
-                        <a class="menu-link active" href="{{ route('home') }}">
+                        <a class="menu-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
                             <span class="menu-icon">
-                                <i class="ki-duotone ki-category fs-2">
+                                <i class="ki-duotone ki-element-11 fs-2">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
                                     <span class="path3"></span>
@@ -47,38 +46,48 @@
                             </span>
                             <span class="menu-title">Dashboard</span>
                         </a>
-                        <!--end:Menu link-->
                     </div>
-                    <!--end:Menu item-->
+                    <!--end::Menu item-->
+
                     <!--begin:Menu item-->
                     <div class="menu-item pt-5">
                         <!--begin:Menu content-->
                         <div class="menu-content">
-                            <span class="menu-heading fw-bold text-uppercase fs-7">
-                                Menu
-                            </span>
+                            <span class="menu-heading fw-bold text-uppercase fs-7">Document Management</span>
                         </div>
                         <!--end:Menu content-->
                     </div>
                     <!--end:Menu item-->
-                    <!--begin:Menu item-->
+
+                    <!--begin::Menu item-->
                     <div class="menu-item">
-                        <!--begin:Menu link-->
-                        <a class="menu-link" href="https://preview.keenthemes.com/html/keen/docs/base/utilities"
-                            target="_blank">
+                        <a class="menu-link {{ request()->routeIs('admin.documents.index') ? 'active' : '' }}"
+                            href="{{ route('admin.documents.index') }}">
                             <span class="menu-icon">
-                                <i class="ki-duotone ki-rocket fs-2">
+                                <i class="ki-duotone ki-document fs-2">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
                                 </i>
                             </span>
-                            <span class="menu-title">
-                                Document
-                            </span>
+                            <span class="menu-title">All Documents</span>
                         </a>
-                        <!--end:Menu link-->
                     </div>
-                    <!--end:Menu item-->
+                    <!--end::Menu item-->
+
+                    <!--begin::Menu item-->
+                    <div class="menu-item">
+                        <a class="menu-link {{ request()->routeIs('admin.documents.create') ? 'active' : '' }}"
+                            href="{{ route('admin.documents.create') }}">
+                            <span class="menu-icon">
+                                <i class="ki-duotone ki-document-add fs-2">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </i>
+                            </span>
+                            <span class="menu-title">Create Document</span>
+                        </a>
+                    </div>
+                    <!--end::Menu item-->
                 </div>
                 <!--end::Menu-->
             </div>

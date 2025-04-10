@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -10,7 +11,7 @@ Route::get('/', function () {
 });
 
 Route::middleware('auth', 'verified')->group(function () {
-    Route::get('home', [HomeController::class, 'index'])->name('home');
+    Route::get('home', [DocumentController::class, 'index'])->name('home');
 });
 
 Route::middleware('auth')->group(function () {
@@ -19,6 +20,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('getkab', [ProfileController::class, 'getKab'])->name('profile.getkab');
     Route::post('getkec', [ProfileController::class, 'getKec'])->name('profile.getkec');
+    // Document routes
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Route::resource('documents', DocumentController::class);
+        Route::post('documents/{document}/publish', [DocumentController::class, 'publish'])->name('documents.publish');
+    });
 });
 
 require __DIR__ . '/auth.php';

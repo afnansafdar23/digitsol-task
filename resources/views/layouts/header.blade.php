@@ -156,7 +156,7 @@
                                 <div class="d-flex flex-column">
                                     <div class="fw-bold d-flex align-items-center fs-5">{{ auth()->user()->name }}
                                     </div>
-                                    <a href="{{ route('profile.edit') }}"
+                                    <a href="#"
                                         class="fw-semibold text-muted text-hover-primary fs-7">
                                         {{ auth()->user()->email }}
                                     </a>
@@ -169,25 +169,18 @@
                         <div class="separator my-2"></div>
                         <!--end::Menu separator-->
                         <!--begin::Menu item-->
-                        <div class="menu-item px-5 my-1">
-                            <a href="{{ route('profile.edit') }}" class="menu-link px-5">
-                                Pengaturan Akun
-                            </a>
-                        </div>
-                        <!--end::Menu item-->
-                        <!--begin::Menu item-->
                         <div class="menu-item px-5">
                             <a href="javascript:void(0);" class="menu-link px-5 text-danger" onclick="submitForm()">
-                                Keluar
+                                Logout
                             </a>
 
-                            <form id="formKeluar" action="{{ route('logout') }}" method="POST">
+                            <form id="formLogout" action="{{ route('logout') }}" method="POST">
                                 @csrf
                             </form>
 
                             <script>
                                 function submitForm() {
-                                    document.getElementById("formKeluar").submit();
+                                    document.getElementById("formLogout").submit();
                                 }
                             </script>
                         </div>

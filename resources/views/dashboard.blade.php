@@ -1,6 +1,4 @@
-@extends('app', [
-    'title' => 'Dashboard',
-])
+@extends('layouts.app')
 
 @section('content')
     @include('sweetalert::alert')
